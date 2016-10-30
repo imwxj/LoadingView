@@ -14,17 +14,17 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 
-import static com.wxj.loadingview.LoadingView.State.ENDING;
-import static com.wxj.loadingview.LoadingView.State.LOADING;
-import static com.wxj.loadingview.LoadingView.State.NONE;
-import static com.wxj.loadingview.LoadingView.State.STARTING;
+import static com.wxj.loadingview.TickLoadingView.State.ENDING;
+import static com.wxj.loadingview.TickLoadingView.State.LOADING;
+import static com.wxj.loadingview.TickLoadingView.State.NONE;
+import static com.wxj.loadingview.TickLoadingView.State.STARTING;
 
 /**
  * Created by wxj on 2016/10/21.
  * 自定义loading进度条
  */
 
-public class LoadingView extends View {
+public class TickLoadingView extends View {
     private static String TAG = "LoadingView";
     private int width, height;
     private Paint mPaint;
@@ -57,7 +57,7 @@ public class LoadingView extends View {
     }
 
     // 当前的状态
-    private LoadingView.State mCurrentState = NONE;
+    private TickLoadingView.State mCurrentState = NONE;
 
     // 用于控制动画状态转换
     private Handler mAnimatorHandler;
@@ -65,7 +65,7 @@ public class LoadingView extends View {
     // 判断是否loading
     private boolean isLoading = false;
 
-    public LoadingView(Context context) {
+    public TickLoadingView(Context context) {
         super(context);
         Log.e(TAG, "LoadingView: ");
         initListener();
