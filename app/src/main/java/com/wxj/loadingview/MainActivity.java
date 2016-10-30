@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -16,27 +17,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new ECGView(this));
-//        setContentView(R.layout.activity_main);
-//        btn_start = (Button) findViewById(R.id.btn_start);
-//        btn_stop = (Button) findViewById(R.id.btn_stop);
-//        btn_stop.setEnabled(false);
-//        btn_start.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                btn_start.setEnabled(false);
-//                btn_stop.setEnabled(true);
-//                showLoading();
-//            }
-//        });
-//        btn_stop.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                btn_start.setEnabled(true);
-//                btn_stop.setEnabled(false);
-//                hideLoading();
-//            }
-//        });
+//        setContentView(new ECGView(this));
+        setContentView(R.layout.activity_main);
+        btn_start = (Button) findViewById(R.id.btn_start);
+        btn_stop = (Button) findViewById(R.id.btn_stop);
+        btn_stop.setEnabled(false);
+        btn_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn_start.setEnabled(false);
+                btn_stop.setEnabled(true);
+                showLoading();
+            }
+        });
+        btn_stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn_start.setEnabled(true);
+                btn_stop.setEnabled(false);
+                hideLoading();
+            }
+        });
     }
 
     public void showLoading() {

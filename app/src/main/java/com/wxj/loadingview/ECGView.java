@@ -148,7 +148,8 @@ public class ECGView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-//        Log.e(TAG, "onDraw: " + length);
+        //Log.e(TAG, "onDraw: " + length);
+        //画布调成蓝色
         canvas.drawColor(Color.parseColor("#0082D7"));
         canvas.translate(width / 2, height / 2);
         drawTail(canvas);
